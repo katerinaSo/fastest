@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Mukta Mahee", sans-serif;
+}
+
+nav ul {
+    list-style-type: none;
+    display: none;
+}
+
+nav ul a {
+    display: block;
+    background: #0d1f3c;
+    font-size: 17px;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ef5b37;
+    transition: color 1s ease, background 1s ease, padding 1s ease;
+}
+
+nav ul a:hover {
+    background: #474747;
+    color: rgb(240, 248, 255);
+    padding-left: 30px;
+}
+
+.nav-container img {
+    width: 100px;
+    align-self: center;
+}
+
+.nav-container {
+    padding: 0 20px;
+    background: #0d1f3c;
+    border-bottom: 3px solid #ef5b37;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    margin: 7px;
+    background: #ef5b37;
+}
+
+.btn {
+    padding: 2px;
+    display: inline-block;
+    align-self: center;
+}
+
+header {
+    min-height: 100vh;
+    background: linear-gradient(rgb(47, 32, 32, 0.3), rgba(54, 23, 23, 0.3)),
+        url(images/action-asphalt-back-light-315938.jpg) center/cover fixed
+            no-repeat;
+    /*
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+*/
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    flex: 0 0 auto;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+h1{
+    color:rgb(240, 248, 255);
+}
+
+h3{
+    color:#ef5b37;
+    text-transform: uppercase;
+}
+
+.banner {
+    color: #ef5b37;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    text-align: center;
+}
+
+.banner-center img {
+    opacity: 0;
+}
+
+.banner-icons {
+    padding: 20px;
+}
+.banner-icons a {
+    display: inline-block;
+    font-size: 33px;
+    color: #ef5b37;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0 10px;
+    margin: 50px 10px;
+    transition: color 1s ease, transform 1s ease;
+}
+
+.banner-icons a:hover {
+    color: rgb(240, 248, 255);
+    transform: scale(1.5);
+}
+
+@media screen and (min-width:776px){
+    .nav-container{
+        display:none;
+    }
+    nav ul{
+        display: flex!important;
+        flex-wrap: wrap;
+        justify-content: center;
+        background: #0d1f3c;
+    }
+    nav ul a{
+        background: transparent;
+    }
+    nav ul a:hover{
+        background: transparent; 
+        padding-left:20px;
+    }
+}
+
+
+/*###########   SECTION ABOUT #################*/
+
+.all-about{
+    min-height: 80vh;
+    background:url(images/action-asphalt-black-background-821723.jpg)center/cover fixed no-repeat;
+    
+}
+
+
+
+.about{
+    color:rgb(240, 248, 255);
+    display: flex;
+    margin: 0px 20px;
+}
+
+
+.about-icon{
+    align-self: center;
+    font-size: 25px;
+    color:rgb(240, 248, 255);
+    margin-right: 20px;
+    border:2px solid white;
+    border-radius: 50%;
+    padding: 3px 15px;
+    
+
+}
+
+.about-text h3{
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.about-text p{
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+@media screen and (min-width:576px){
+    .about-center{
+        width: 70%;
+/*        margin:0 auto;*/
+    }
+    .about-icon{
+        font-size:30px;
+    }
+}
+
+@media screen and (min-width:776px){
+    .about-center{
+        width: 60%;
+/*        margin:0 auto;*/
+    }
+    .about-icon{
+        font-size: 40px;
+        
+    }
+}
+
+
+  
+/*############### PHOTOGRAPHY #######################*/
+
+.photos{
+    background: #474747;    
+}
+
+.title h3{
+    text-align: center;
+    color:rgb(240, 248, 255);
+}
+
+.title-underline{
+    background: #ef5b37;
+    height: 4px;
+    width: 100px;
+    margin:10px auto;
+}
+
+.title{
+    padding: 40px 0;
+}
+
+.photo img{
+    width: 100%;
+    display: block;
+    opacity: 0.3;
+    transition:opacity 1s ease, transform 1s ease;
+}
+
+.photo{
+    background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
+/*    overflow:hidden;*/
+}
+
+.photo img:hover{
+    opacity: 1;
+/*    transform: scale(1.1);*/
+}
+
+
+
+/*----   old way with media query-----*/
+/*
+@media screen and (min-width:576px){
+    .photos-center{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .photo{
+        flex:0 0 50%;
+    }
+}
+
+@media screen and (min-width:900px){
+    .photos-center{
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .photo{
+        flex:0 0 33.333%;
+    }
+}
+*/
+/*-------------------------------------*/
+
+@media screen and (min-width:776px){
+    .photos-center{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media screen and (min-width:876px){
+    .photos-center{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+
+/*##########  track records #############*/
+
+.records{
+    min-height: 100vh;
+    padding:100px 0;
+    background: url(images/automobile-fast-number-248747.jpg)center/cover fixed no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.records-card{
+    background: rgba(240, 248, 255, 0.7);
+    text-align: center;
+    padding:60px 40px;
+    
+}
+
+.records-card .fa-car{
+    font-size: 40px;
+    color:rgba(0,0,0,0.5);
+    margin:20px 0;
+}
+.records-card p{
+    line-height: 2;
+}
+
+@media screen and (min-width:700px){
+    .records-card{
+        max-width:50%;
+        border-radius: 30px;
+    }
+    .records-card p{
+        max-width: 70%;
+        margin:0 auto;
+    }
+}
+
+
+/*############   FILLER ###############*/
+.filler{
+    min-height: 40vh;
+    background: url(images/black-and-white-car-engine-chrome-190574.jpg)center/cover fixed no-repeat;
+}
+
+
+/* ###########   CONTACT #############*/
+
+.contact{
+    min-height: 100vh;
+    background: url(images/auto-automobile-automotive-38570.jpg)center/cover fixed no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-card{
+    flex:0 0 80%;
+    background: rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+/*##############   FOOTER ############*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
