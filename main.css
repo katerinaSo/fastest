@@ -20,6 +20,7 @@ nav ul a {
     text-decoration: none;
     text-transform: uppercase;
     color: #ef5b37;
+    -webkit-transition: color 1s ease, background 1s ease, padding 1s ease;
     transition: color 1s ease, background 1s ease, padding 1s ease;
 }
 
@@ -31,6 +32,7 @@ nav ul a:hover {
 
 .nav-container img {
     width: 100px;
+    -ms-flex-item-align: center;
     align-self: center;
 }
 
@@ -38,7 +40,11 @@ nav ul a:hover {
     padding: 0 20px;
     background: #0d1f3c;
     border-bottom: 3px solid #ef5b37;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
@@ -52,11 +58,15 @@ nav ul a:hover {
 .btn {
     padding: 2px;
     display: inline-block;
+    -ms-flex-item-align: center;
     align-self: center;
 }
 
 header {
     min-height: 100vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgb(47, 32, 32, 0.3)), to(rgba(54, 23, 23, 0.3))),
+        url(images/action-asphalt-back-light-315938.jpg) center/cover fixed
+            no-repeat;
     background: linear-gradient(rgb(47, 32, 32, 0.3), rgba(54, 23, 23, 0.3)),
         url(images/action-asphalt-back-light-315938.jpg) center/cover fixed
             no-repeat;
@@ -66,11 +76,18 @@ header {
     background-repeat: no-repeat;
     background-attachment: fixed;
 */
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 nav {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     position: fixed;
     width: 100%;
@@ -88,9 +105,17 @@ h3{
 
 .banner {
     color: #ef5b37;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 auto;
     flex: 1 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: top;
+    -ms-flex-align: top;
     align-items: top;
     text-align: center;
 }
@@ -109,11 +134,15 @@ h3{
     background-color: rgba(0, 0, 0, 0);
     padding: 0 10px;
     margin: 50px 10px;
+    -webkit-transition: color 1s ease, -webkit-transform 1s ease;
+    transition: color 1s ease, -webkit-transform 1s ease;
     transition: color 1s ease, transform 1s ease;
+    transition: color 1s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 
 .banner-icons a:hover {
     color: rgb(240, 248, 255);
+    -webkit-transform: scale(1.5);
     transform: scale(1.5);
 }
 
@@ -122,8 +151,13 @@ h3{
         display:none;
     }
     nav ul{
+        display: -webkit-box!important;
+        display: -ms-flexbox!important;
         display: flex!important;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         background: #0d1f3c;
     }
@@ -149,12 +183,15 @@ h3{
 
 .about{
     color:rgb(240, 248, 255);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin: 0px 20px;
 }
 
 
 .about-icon{
+    -ms-flex-item-align: center;
     align-self: center;
     font-size: 25px;
     color:rgb(240, 248, 255);
@@ -207,7 +244,7 @@ h3{
 
 .title h3{
     text-align: center;
-    color:rgb(240, 248, 255);
+    color:#ef5b37;
 }
 
 .title-underline{
@@ -225,10 +262,14 @@ h3{
     width: 100%;
     display: block;
     opacity: 0.3;
+    -webkit-transition:opacity 1s ease, -webkit-transform 1s ease;
+    transition:opacity 1s ease, -webkit-transform 1s ease;
     transition:opacity 1s ease, transform 1s ease;
+    transition:opacity 1s ease, transform 1s ease, -webkit-transform 1s ease;
 }
 
 .photo{
+    background: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.9)),to(rgba(0,0,0,0.9)));
     background: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9));
 /*    overflow:hidden;*/
 }
@@ -285,8 +326,14 @@ h3{
     min-height: 100vh;
     padding:100px 0;
     background: url(images/automobile-fast-number-248747.jpg)center/cover fixed no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     
 }
@@ -329,25 +376,111 @@ h3{
 /* ###########   CONTACT #############*/
 
 .contact{
-    min-height: 100vh;
+    min-height: 80vh;
     background: url(images/auto-automobile-automotive-38570.jpg)center/cover fixed no-repeat;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    
 }
 
 .contact-card{
+    -webkit-box-flex:0;
+    -ms-flex:0 0 80%;
     flex:0 0 80%;
+    padding: 40px 0;
     background: rgba(0,0,0,0.3);
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;   
 }
 
+form{
+    -webkit-box-flex:0;
+    -ms-flex:0 0 60%;
+    flex:0 0 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+form input{
+    margin:10px 0;
+}
+form h3{
+    text-align: center;
+    text-transform: uppercase;
+}
 
+form input,
+form textarea{
+    padding: 5px;
+    border: 3px solid #ef5b37;
+}
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+    text-transform: uppercase;
+}
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder{
+    text-transform: uppercase;
+}
+input::placeholder,
+textarea::placeholder{
+    text-transform: uppercase;
+}
+.form-btn{
+    margin: 20px;
+    font-size: 20px;
+    border-radius: 40px;
+    background: #ef5b37;
+    color: aliceblue;
+    -webkit-transition: color 1s ease-in-out, background 1s ease-in-out;
+    -webkit-transition: color 1s ease, background 1s ease;
+    transition: color 1s ease, background 1s ease;
+}
 
-
-
+.form-btn:hover{
+    color:#ef5b37;
+    background: aliceblue;
+}
 
 /*##############   FOOTER ############*/
 
+footer{
+    background:#0d1f3c;
+    padding: 20px 0;
+    text-align: center;
+    color: aliceblue;
+    font-size: 15px;
+}
+.footer-icons a{
+    display: inline-block;
+    font-size: 25px;
+    margin: 0 10px 20px; 
+    color: #ef5b37;
+}
+
+.footer-icons a:hover {
+    color: rgb(240, 248, 255);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
 
 
 
